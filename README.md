@@ -6,6 +6,8 @@ Tools and libs for c++ compilation and packaging on linux and windows.
 Features
 --------
 
+Based on ubuntu:18.04.
+
 Libs: boost qt5 sqlite proj eigen
 Documentation: doxygen sphinx
 Packaging: zip dpkg-deb appimage 
@@ -47,17 +49,9 @@ It may be necessary to add a systemd configuration as root:
 Build docker image
 ------------------
 
-From docker directory:
-
     docker build --network=host -t crossqt1804 .
 
 It needs 2 GB of disk space.
-
-The image is based on ubuntu:18.04. In case of old base image (with 404 errors on packages), update with:
-
-    docker pull ubuntu:18.04
-
-Then retry to build.
 
 
 Run image
@@ -78,4 +72,3 @@ Remove docker image
 -------------------
 
     docker rmi crossqt1804
-
